@@ -368,6 +368,62 @@ header {
     margin-top: 1.5rem;
 }
 
+/* ===== TOOLS GRID ===== */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tool-category {
+    /* Uses same styling as .terminal-card */
+}
+
+.tool-category .card-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tool-category .card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tool-category .card-content li {
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.tool-category .card-content li:last-child {
+    margin-bottom: 0;
+}
+
+.tool-category .card-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.tool-category .card-content a {
+    color: var(--terminal-cyan);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.tool-category .card-content a:hover {
+    border-bottom-color: var(--terminal-cyan);
+    text-shadow: 0 0 8px var(--glow-cyan);
+}
+
 .terminal-card {
     background: var(--bg-card);
     border-radius: 8px;
@@ -625,6 +681,11 @@ header {
     }
     
     .value-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tools-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
