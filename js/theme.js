@@ -14,6 +14,8 @@
         try {
             localStorage.setItem(STORAGE_KEY, theme);
         } catch (e) {}
+        var btn = document.getElementById('theme-toggle');
+        if (btn) btn.textContent = theme === 'dark' ? 'light' : 'dark';
     }
 
     setTheme(getTheme());
